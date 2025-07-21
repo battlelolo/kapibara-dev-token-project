@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* External Plausible script */}
-        <script defer data-domain="kapibara-dev-token-project.vercel.app" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+        <script defer data-domain="kapibara-dev-token-project.vercel.app" src="https://plausible.io/js/script.js"></script>
         
         {/* Inline Plausible script, corrected for ESLint and React */}
         {/* <script
