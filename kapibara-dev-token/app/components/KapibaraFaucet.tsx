@@ -62,7 +62,8 @@ export function KapibaraFaucet() {
 
       {hash && <p className="mt-4 break-all">✅ Transaction sent! Hash: <a href={`https://sepolia.etherscan.io/tx/${hash}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{hash}</a></p>}
       {isConfirmed && <p className="mt-2 text-xl text-green-600 font-bold">🎉 Success! The tokens are in your wallet.</p>}
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       {error && <p className="mt-4 text-red-500">Error: {(error as any).shortMessage || error.message}</p>}
-    </div>
+</div>
   );
 }
