@@ -19,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head><script defer data-domain="kapibara-dev-token-project.vercel.app" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+</head>
       <body className={inter.className}>
         <Providers>{children}</Providers> {/* 2. children을 Providers로 감싸줍니다. */}
       </body>
