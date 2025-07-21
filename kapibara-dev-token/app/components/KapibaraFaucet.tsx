@@ -41,7 +41,7 @@ export function KapibaraFaucet() {
         onClick={() => connect({ connector: injected() })}
         className="px-6 py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600"
       >
-        Connect MetaMask 🦊
+        Connect MetaMask
       </button>
     );
   }
@@ -58,7 +58,7 @@ export function KapibaraFaucet() {
       >
         {isPending && 'Approving in wallet...'}
         {isConfirming && 'Processing transaction...'}
-        {!isPending && !isConfirming && 'Get Kapibara Token 🐹'}
+        {!isPending && !isConfirming && 'Get Kapibara Token'}
       </button>
 
       {/* CHANGED: Added text-gray-500 for better visibility */}
