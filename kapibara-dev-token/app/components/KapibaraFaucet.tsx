@@ -49,7 +49,8 @@ export function KapibaraFaucet() {
   // If the wallet is connected, show the faucet UI
   return (
     <div className="text-center">
-      <p className="mb-4">Connected Wallet: <span className="font-mono bg-gray-200 px-2 py-1 rounded">{address}</span></p>
+      {/* CHANGED: Added text-gray-500 for better visibility */}
+      <p className="mb-4 text-gray-500">Connected Wallet: <span className="font-mono text-black bg-gray-200 px-2 py-1 rounded">{address}</span></p>
       <button
         onClick={handleClaim}
         disabled={isPending || isConfirming}
@@ -60,10 +61,11 @@ export function KapibaraFaucet() {
         {!isPending && !isConfirming && 'Get Kapibara Token 🐹'}
       </button>
 
-      {hash && <p className="mt-4 break-all">✅ Transaction sent! Hash: <a href={`https://sepolia.etherscan.io/tx/${hash}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{hash}</a></p>}
+      {/* CHANGED: Added text-gray-500 for better visibility */}
+      {hash && <p className="mt-4 break-all text-gray-500">✅ Transaction sent! Hash: <a href={`https://sepolia.etherscan.io/tx/${hash}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{hash}</a></p>}
       {isConfirmed && <p className="mt-2 text-xl text-green-600 font-bold">🎉 Success! The tokens are in your wallet.</p>}
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       {error && <p className="mt-4 text-red-500">Error: {(error as any).shortMessage || error.message}</p>}
-</div>
+    </div>
   );
 }
