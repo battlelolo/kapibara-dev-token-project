@@ -24,13 +24,13 @@ export default function RootLayout({
         <script defer data-domain="kapibara-dev-token-project.vercel.app" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
         
         {/* Inline Plausible script, corrected for ESLint and React */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               window.plausible = window.plausible || function(...args) { (window.plausible.q = window.plausible.q || []).push(args) };
             `,
           }}
-        />
+        /> */}
       </head>
       <body className={inter.className}>
         <Providers>{children}</Providers>
