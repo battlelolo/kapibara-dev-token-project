@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers"; // 1. 방금 만든 Providers를 가져옵니다.
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +19,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head><script defer data-domain="kapibara-dev-token-project.vercel.app" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
-<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-</head>
+      <head>
+        {/* External Plausible script */}
+        <script defer data-domain="kapibara-dev-token-project.vercel.app" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+        
+        {/* Inline Plausible script, corrected for ESLint and React */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.plausible = window.plausible || function(...args) { (window.plausible.q = window.plausible.q || []).push(args) };
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
-        <Providers>{children}</Providers> {/* 2. children을 Providers로 감싸줍니다. */}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
