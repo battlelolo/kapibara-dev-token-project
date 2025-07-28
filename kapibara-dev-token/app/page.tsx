@@ -1,9 +1,11 @@
 // app/page.tsx
 import { KapibaraFaucet } from "./components/KapibaraFaucet";
+import { FloatingKapibara } from "./components/FloatingKapibara";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-4">
+       <FloatingKapibara />
       <div className="p-8 bg-white rounded-xl shadow-lg text-center max-w-lg w-full">
         <h1 className="text-gray-500 text-4xl font-bold mb-2">Kapibara Dev Token</h1>
         <p className="text-gray-600 mb-8">A Web3 Token Faucet Project for Kapibara Dev App Users</p>
