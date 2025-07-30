@@ -2,11 +2,11 @@
 
 A simple Web3 token faucet for KDT tokens on the Sepolia testnet, built with Next.js and Hardhat for my developer portfolio.
 
-**[➡️ Live Demo](https://kapibara-dev-token-project.vercel.app/)**
+**[Live Demo](https://kapibara-dev-token-project.vercel.app/)**
 
 ---
 
-### 🛠️ Tech Stack
+### Tech Stack
 
 -   **Frontend**: Next.js, TypeScript, wagmi, Tailwind CSS
 -   **Backend**: Solidity, Hardhat, OpenZeppelin
@@ -14,7 +14,7 @@ A simple Web3 token faucet for KDT tokens on the Sepolia testnet, built with Nex
 
 ---
 
-### 🚀 How to Run Locally
+### How to Run Locally
 
 1.  **Clone & Install Dependencies:**
     ```sh
@@ -42,7 +42,7 @@ A simple Web3 token faucet for KDT tokens on the Sepolia testnet, built with Nex
 
 ---
 
-### 📜 Smart Contract
+### Smart Contract
 
 -   **Network**: Sepolia Testnet
 -   **Address**: [`0xE70163a2F358fDE34D7d3C08A63b611E615322A2`](https://sepolia.etherscan.io/address/0xE70163a2F358fDE34D7d3C08A63b611E615322A2)
